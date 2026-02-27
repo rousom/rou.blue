@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on rou.blue</title>
+    <link>https://example.org/en/</link>
+    <description>Recent content in Home on rou.blue</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Jan 2023 08:30:00 -0700</lastBuildDate>
+    <atom:link href="https://example.org/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>https://example.org/en/projects/about/</link>
+      <pubDate>Sun, 01 Jan 2023 08:30:00 -0700</pubDate>
+      <guid>https://example.org/en/projects/about/</guid>
+      <description>&lt;h2 id=&#34;hey-there&#34;&gt;Hey There!&lt;/h2&gt;&#xA;&lt;h2 id=&#34;im-an-interface-designer-focusing-on-exhibition-artdesign-and-human-computer-interaction&#34;&gt;I’m an interface designer focusing on exhibition art/design and human computer interaction.&lt;/h2&gt;</description>
+    </item>
+  </channel>
+</rss>
