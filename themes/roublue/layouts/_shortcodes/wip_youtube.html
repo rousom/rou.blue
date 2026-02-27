@@ -1,0 +1,23 @@
+<div class="youtube-embed" data-id="{{ .Get "id" }}" style="cursor: pointer; position: relative; display: grid; aspect-ratio: 16/9; width: 100%;">
+  <img src="https://img.youtube.com/vi/{{ .Get "id" }}/hqdefault.jpg"
+       alt="YouTube Video"
+       loading="lazy"
+       style=" position: absolute; width: 100%; aspect-ratio: 16/9;">
+  <div button="place-self: center; background: red; color: white; padding: 10px; border-radius: 50%;">
+    ▶
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.youtube-embed').forEach(el => {
+    el.addEventListener('click', () => {
+      const iframe = document.createElement('iframe');
+      iframe.setAttribute('src', 'https://www.youtube.com/embed/' + el.dataset.id + '?autoplay=1');
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.style.aspectRatio = '16/9';
+      iframe.style.width = '100%';
+      el.parentNode.replaceChild(iframe, el);
+    });
+  });
+</script>

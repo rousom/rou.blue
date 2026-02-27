@@ -1,0 +1,26 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'rou.blue'
+theme = 'roublue'
+defaultContentLanguage = 'de'
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    contentDir = "content"
+  [languages.de]
+    languageName = "Deutsch"
+    weight = 10
+    contentDir = "content"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+
+[privacy]
+[privacy.youTube]
+  disable = false
+  privacyEnhanced = true
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

@@ -1,0 +1,16 @@
+<h1><a class="logo no_link" href="{{ .Site.Home.RelPermalink }}">{{ site.Title }}</a> – Rou Sommermann </h1>
+{{ if hugo.IsMultilingual }}
+<!-- <nav>
+  <ul class="lang_switcher">
+    {{ range .Site.Languages }}
+    {{ if eq . $.Site.Language }}
+    <li>{{ .LanguageCode }}</span>
+      {{ end }}
+      {{ end }}
+        {{ range $.Translations }}
+        <li><a class="no_link" title="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">{{ .Language.LanguageCode }}</a></li>
+        {{ end }}
+    </li>
+  </ul>
+</nav> -->
+{{ end }}

@@ -1,0 +1,21 @@
+{{ define "main" }}
+  {{ partial "aboutme.html" . }}
+  
+  {{ .Content }}
+  <div class="featured_projects">
+  {{ range where site.RegularPages ".Params.featured" "intersect" (slice "true") }}
+        <!-- Get the parent folder name (e.g., "topograph") -->
+      {{ $projectName := path.Base .File.Dir }}
+      <!-- Construct the image path -->
+      {{ $imagePath := printf "%s%s.webp" .File.Dir $projectName }}
+      {{ $bgPath := printf "%s%s_bg.webp" .File.Dir $projectName }}
+    <a class="no_link link_card" href="{{ .RelPermalink }}">
+      <section data-content="{{.Params.description}}" class="project_preview" style="background-image: url('{{ $bgPath | relURL }}');">
+
+        <img src="{{ $imagePath | relURL }}" alt="{{ .Title }}">
+      <!-- {{ .Summary }} -->
+      </section>
+    </a>
+  {{ end }}
+  </div>
+{{ end }}

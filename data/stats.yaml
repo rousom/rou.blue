@@ -1,0 +1,9 @@
+stat_names:
+  en:
+    year: "Year"
+    contributors: "Contributors"
+    context: "Context"
+  de:
+    year: "Jahr"
+    contributors: "Team"
+    context: "Kontext"

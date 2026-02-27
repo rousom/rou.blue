@@ -1,0 +1,9 @@
+{{ $about := site.GetPage "section" "about" }}
+{{ if $about }}
+<section class="about_section">
+    <img src="{{ $about.Params.profile_image | relURL }}" alt="Profile Image" class="profile_image">
+    <div class="about_text">
+        {{ $about.Content }}
+    </div>
+</section>
+{{ end }}

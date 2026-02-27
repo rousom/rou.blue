@@ -1,0 +1,38 @@
+{{ define "main" }}
+<articlec class="project_page">
+
+  <div class="project_hero" style="background-image: url('{{ .Params.cover_image | relURL}}');" >
+    <img class="project_logo" src="{{ .Params.project_logo | relURL }}" alt="{{.Title}}">
+    
+    <section class="project_stats">
+      <dl>
+        {{ $currentLang := site.Language.Lang }}
+        {{ $statOrder := slice "year" "context" "contributors" }}
+        {{ $params := .Params }} {{/* Store the page params */}}
+        {{ range $statOrder }}
+        {{ $key := . }}
+        {{ if isset $params $key }}
+        <dt>{{ index site.Data.stats.stat_names $currentLang $key }}</dt>
+        <dd>
+          {{ if eq $key "contributors" }}
+          {{ delimit (index $params $key) ", " }}
+          {{ else }}
+          {{ index $params $key }}
+          {{ end }}
+        </dd>
+        {{ end }}
+        {{ end }}
+      </dl>
+    </section>
+    <section class="project_description">
+      {{.Params.description_long}}
+    </section>
+  </div>
+  <div class="project_more">
+    {{ .Content }}
+
+  </div>
+  
+  
+</article>
+{{ end }}
